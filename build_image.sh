@@ -1,1 +1,1 @@
-docker build -t lpp/teamcity_agent_debian_stable .
+docker build -t jeandet/teamcity_agent_debian_stable .
