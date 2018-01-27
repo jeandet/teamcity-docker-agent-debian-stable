@@ -2,7 +2,8 @@ FROM debian:stable
 #Derived from official TeamCity image
 LABEL modified "Alexis Jeandet <alexis.jeandet@member.fsf.org>"
 
-RUN apt update && apt install -y openjdk-8-jdk mercurial git tar gzip unzip xvfb
+RUN apt update && apt install -y openjdk-8-jdk mercurial git cmake tar gzip unzip xvfb g++ lsb-release qt5-default build-essential qttools5-dev qttools5-dev-tools
+RUN apt install -y pandoc libnetpbm10-dev libhdf5-dev libfftw3-dev python-dev libhdf4-dev libtiff5-dev libgsl-dev qtmultimedia5-dev libqt5svg5-dev libqt5scripttools5 qtscript5-dev libqt5multimediawidgets5 libcfitsio-dev libhdf4-dev libhdf5-dev libhdf5-100 python-numpy
 
 VOLUME /data/teamcity_agent/conf
 ENV CONFIG_FILE=/data/teamcity_agent/conf/buildAgent.properties \
